@@ -25,12 +25,12 @@ body {
 }
 
 #download {
-	width: 25%;
+	width: 30%;
 	text-align: center;
 }
 
 #features {
-	width: 75%
+	width: 70%
 }
 
 h1 {
@@ -44,14 +44,14 @@ a {
 }
 
 a.download-button {
-	background: #85ff33;
-	box-shadow: 0 0 2px 8px #b3ff80;
-	padding: .5em .75em;
+	background: #ff4733;
+	box-shadow: 0 0 1px 5px #ff8c80;
+	padding: .75em 1em;
 
 	font-size: 1.5em;
 	font-weight: bold;
 	color: white;
-	text-shadow: 1px 1px 0px #5ce600;
+	text-shadow: 1px 1px 0px #e61600;
 	text-transform: uppercase;
 	text-decoration: none;
 }
