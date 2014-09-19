@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <style>
+      * {
+      font-family: 'Source Sans Pro', sans-serif;
+      }
+      body {
+        background-image: url(bg.jpg);
+      }
+      #page {
+        background: #1D1F20; 
+        display: table; 
+        max-width: 650px; 
+        padding: 10px; 
+        margin: 0 auto 40px;
+        align: center;
+      	border: 2px solid;
+        border-radius: 20px
+      }
+      h1, h2 {
+        color: #00FF7F;
+        text-align:center;
+      }
+      h2 {
+        margin-top: 50px;
+      }
+      .ptxt, p {
+        color: #EBEBEB;
+      }
+      a {
+        color: #5077A1;
+      }
+      .screen {
+        max-width: 650px;
+        margin-bottom: 30px
+      }
+      #dnl {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="page">
+      <h1>Sauerbraten SDL2 Client</h1>
+
+      <h2>Download</h2>
+      <div id="dnl">
+      <a href="https://github.com/extra-a/sauer-sdl2-bins/archive/master.zip">
+        <img src="download.png" alt="Windows bins">
+      </a>
+      <br>
+      <p>Source code is available at <a href="https://github.com/extra-a/sauer-sdl2.git">github repository</a>.</p>
+      </div>
+
+      <h2>Features</h2>
+      <ul>      
+        <li class="ptxt">All SDOS features, except multipoll.
+          SDL2 uses raw mouse input whenever is possible, so mouse movement has no any lags/acceleration.</li>
+        <li class="ptxt">Native build system/libraries are used (no static linkage).</li>
+        <li class="ptxt">VS instead of mingw for window to get better performance.</li>
+        <li class="ptxt">Sauerbraten default sleep/timer to get even more performance and compatibility with old systems.</li>
+        <li class="ptxt">Improved alt+tabbing.</li>
+        <li class="ptxt">Options to show more statistics on scoreboard.</li>
+        <li class="ptxt">New command "ignoreserver" to permanently ignore any server on the master list.</li>
+        <li class="ptxt">Easy additional visual settings configuration via "extendedsettings" command.</li>
+        <li class="ptxt">Accuracy/damage statistics menu command "showplayerstats" (due to current network protocol limitations, statistics is gathered only after connection to a server.</li>
+      </ul>
+
+      <h2>Screenshots</h2>
+      <img class="screen" src="./screens/menu.jpg">
+      <img class="screen" src="./screens/scores.jpg">
+      <img class="screen" src="./screens/stats.jpg">
+
+    </div>
+  </body>
+
+</html>
