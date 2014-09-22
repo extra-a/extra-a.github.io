@@ -17,10 +17,10 @@
 			</div>
 			<div id="description" class="cell">
 				<p>
-					This client is based on pisto's work of porting the Sauerbraten client from SDL 1.2 to SDL 2, which should give overall better performance. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">sdos-test client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag, and as a result, it is less constant and thus (for some people) hard to get used to.
+					This client is based on pisto's work of porting the Sauerbraten client from SDL 1.2 to SDL 2, which should give better mouse input in some cases. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">sdos-test client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag, and as a result, it is less constant and thus (for some people) hard to get used to. So instad using high maxfps values like 250/500/1000 will reduce sceen tearing, without any possible vsync lags.<span style="color: #f00;"> Note: if you still have performance issues try to set "/maxfps 0". <span>
 				</p>
 				<p>
-					Instead, this client uses old school polling at regular intervals in order to keep the inevitable input lag constant, which should make it easier for players to get used to the (still small) input lag. At least that's the theory. Note that as a result of this, the input polling rate is linked to your fps count, so keep this in mind when enabling vsync. A tried and tested technique is to set maxfps to the highest multiple of your screen's refresh rate (if you are unsure, it's most likely 60Hz) you can reliably achieve.
+					Visual studio and official sld2 libriries for windows are used. Combined with replacing multipoll by the old and tested sauerbraten code, this will result in better performance and compatibility with more OS/hardware combinations. Also some additional visual options, that have been missing for years are provided (all of them are diabled by default and separate config files are used).
 				</p>
 			</div>
 		</div>
