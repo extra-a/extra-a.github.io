@@ -81,3 +81,7 @@ a {
 #screenshots img:last-child {
 	margin-bottom: 0;
 }
+
+.red {
+	color: #ff4733;
+}
