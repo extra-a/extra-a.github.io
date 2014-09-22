@@ -47,6 +47,10 @@ h1 {
 	color: #111;
 }
 
+ul {
+	margin: 0 auto 1em auto;
+}
+
 a {
 	color: #3385ff;
 }
