@@ -17,10 +17,12 @@
 			</div>
 			<div id="description" class="cell">
 				<p>
-					This client is based on pisto's work of porting the Sauerbraten client from SDL 1.2 to SDL 2, which should give better mouse input in some cases. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">sdos-test client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag, and as a result, it is less constant and thus (for some people) hard to get used to. So instad using high maxfps values like 250/500/1000 will reduce sceen tearing, without any possible vsync lags.<span style="color: #f00;"> Note: if you still have performance issues try to set "/maxfps 0". <span>
+					This client is based on pisto's work of porting the Sauerbraten client from SDL 1.2 to SDL 2, which should give better mouse input in some cases. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">sdos-test client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag and as a result it is less constant and thus (for some people) hard to get used to. Instead, with this client, using high maxfps values like 250/500/1000 (or multiples of your screen's refresh rate) will reduce sceen tearing, while ensuring a constant input polling rate and avoiding input lag due to vsync.
+					<br />
+					<span class="red">Note: if you still have performance issues try to set "/maxfps 0".<span>
 				</p>
 				<p>
-					Visual studio and official sld2 libriries for windows are used. Combined with replacing multipoll by the old and tested sauerbraten code, this will result in better performance and compatibility with more OS/hardware combinations. Also some additional visual options, that have been missing for years are provided (all of them are diabled by default and separate config files are used).
+					Visual Studio and official SDL2 libraries for Windows are used. In combination with replacing multipoll with the old and tested Sauerbraten code, this will result in better performance and compatibility with more OS/hardware combinations. This client also offers some additional game hud elements, which we feel have been missing for years (all of them are diabled by default and separate config files are used).
 				</p>
 			</div>
 		</div>
@@ -32,16 +34,15 @@
 				<ul>
 					<li>Open source: <a href="https://github.com/extra-a/sauer-sdl2.git">code is on GitHub</a></li>
 					<li>Native build system/libraries are used (no static linking)</li>
-					<li>Visual Studio instead of mingw for Windows builds → better performance</li>
 					<li>Improved ALT + TAB functionality</li>
-					<li>New hud elements: clock, scores and ammobar</li>
-					<li>Customization of all new hud elements postions and sizes</li>
-					<li>Options to show more statistics on scoreboard</li>
+					<li>Detailed statistics per player (e.g. accuracy and damage per weapon) via "/showplayerstats" command (due to current network protocol limitations, statistics are gathered only after connecting to a server)</li>
 				</ul>
 			</div>
 			<div class="cell">
 				<ul>
-					<li>Detailed statistics per player (e.g. accuracy and damage per weapon) via "/showplayerstats" command (due to current network protocol limitations, statistics are gathered only after connecting to a server)</li>
+					<li>New hud elements: clock, scores and ammobar</li>
+					<li>Customization of all new hud elements postions and sizes</li>
+					<li>Options to show more statistics on scoreboard</li>
 					<li>Easy to use GUI for configuration of new features ("/extendedsettings" command)</li>
 					<li>New command "/ignoreserver" to permanently ignore any server on the master list</li>
 				</ul>
