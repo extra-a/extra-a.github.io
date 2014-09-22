@@ -12,27 +12,42 @@
 		<h1>Sauerbraten SDL2 Client</h1>
 
 		<div class="table">
-			<div id="download">
+			<div id="download" class="cell">
 				<a class="download-button" href="https://github.com/extra-a/sauer-sdl2-bins/archive/master.zip">Download</a>
 			</div>
+			<div id="description" class="cell">
+				<p>
+					This client is based on pisto's work of porting the Sauerbraten client from SDL 1.2 to SDL 2, which should give overall better performance. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">sdos-test client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag, and as a result, it is less constant and thus (for some people) hard to get used to.
+				</p>
+				<p>
+					Instead, this client uses old school polling at regular intervals in order to keep the inevitable input lag constant, which should make it easier for players to get used to the (still small) input lag. At least that's the theory. Note that as a result of this, the input polling rate is linked to your fps count, so keep this in mind when enabling vsync. A tried and tested technique is to set maxfps to the highest multiple of your screen's refresh rate (if you are unsure, it's most likely 60Hz) you can reliably achieve.
+				</p>
+			</div>
+		</div>
 
-			<div id="features">
+		<h2>Features</h2>
+
+		<div id="features" class="table">
+			<div class="cell">
 				<ul>
-					<li>All features of pisto's <a href="https://github.com/pisto/sdos-test">sdos-test client</a> (which this is based on), except for multipoll</li>
+					<li>Open source: <a href="https://github.com/extra-a/sauer-sdl2.git">code is on GitHub</a></li>
 					<li>Native build system/libraries are used (no static linking)</li>
 					<li>Visual Studio instead of mingw for Windows builds → better performance</li>
-					<li>Sauerbraten's default sleep/timer to have better performance and compatibility with old systems <span style="color: #f00;"> (note: if you still have performance issues try to set "/maxfps 0") </span></li>
 					<li>Improved ALT + TAB functionality</li>
-					<li>Easy to use GUI for configuration of new features ("/extendedsettings" command)</li>
-					<li>Options to show more statistics on scoreboard</li>
 					<li>New hud elements: clock, scores and ammobar</li>
-					<li>Customization of all new hud elements postions and sizes</li>                                       
+					<li>Customization of all new hud elements postions and sizes</li>
+					<li>Options to show more statistics on scoreboard</li>
+				</ul>
+			</div>
+			<div class="cell">
+				<ul>
 					<li>Detailed statistics per player (e.g. accuracy and damage per weapon) via "/showplayerstats" command (due to current network protocol limitations, statistics are gathered only after connecting to a server)</li>
-                                        <li>New command "/ignoreserver" to permanently ignore any server on the master list</li>
-					<li>Open source: <a href="https://github.com/extra-a/sauer-sdl2.git">code is on GitHub</a></li>
+					<li>Easy to use GUI for configuration of new features ("/extendedsettings" command)</li>
+					<li>New command "/ignoreserver" to permanently ignore any server on the master list</li>
 				</ul>
 			</div>
 		</div>
+
 		<div id="screenshots">
 			<img src="./screenshots/menu.jpg">
 			<img src="./screenshots/scores.jpg">
