@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Sauerbraten SDL2 Client</title>
 	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
 	<link href="style/style.css" rel="stylesheet" type="text/css">
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -14,18 +15,22 @@
 
 		<div class="table">
 			<div id="download" class="cell">
-				<a class="download-button" href="https://github.com/extra-a/sauer-sdl2-bins/archive/master.zip">Download</a>
+				<a class="download-button" href="https://github.com/extra-a/sauer-sdl2-bins/archive/master.zip">
+					Download
+				</a>
+
+				<p id="version">
+				</p>
 			</div>
 			<div id="description" class="cell">
 				<p>
 					This client is based on pisto's work of porting the Sauerbraten client from SDL 1.2 to SDL 2, which should give better mouse input in some cases. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">sdos-test client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag and as a result it is less constant and thus (for some people) hard to get used to. Instead, with this client, using high maxfps values like 250/500/1000 (or multiples of your screen's refresh rate) will reduce sceen tearing, while ensuring a constant input polling rate and avoiding input lag due to vsync.
 					<br />
-					<span class="red">Note: if you still have performance issues try to set "/maxfps 0".<span>
+					<span class="red">Note: if you still have performance issues try to set "/maxfps 0".</span>
 				</p>
 				<p>
 					Visual Studio and official SDL2 libraries for Windows are used. In combination with replacing multipoll with the old and tested Sauerbraten code, this will result in better performance and compatibility with more OS/hardware combinations. This client also offers some additional game hud elements, which we feel have been missing for years (all of them are diabled by default and separate config files are used).
 				</p>
-				<p id="version"></p>
 			</div>
 		</div>
 
@@ -52,9 +57,9 @@
 		</div>
 
 		<div id="screenshots">
-			<img src="./screenshots/menu.jpg">
-			<img src="./screenshots/scores.jpg">
-			<img src="./screenshots/stats.jpg">
+			<img src="./screenshots/menu.jpg" alt="Extended settings menu">
+			<img src="./screenshots/scores.jpg" alt="Scoreboard with optional information like damage">
+			<img src="./screenshots/stats.jpg" alt="Detailed player statistics">
 		</div>
 	</div>
 	<script src="jquery.xdomainajax.js"></script>
