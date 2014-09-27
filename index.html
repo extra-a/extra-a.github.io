@@ -24,7 +24,7 @@
 			</div>
 			<div id="description" class="cell">
 				<p>
-					This client is based on pisto's work of porting the Sauerbraten client from SDL 1.2 to SDL 2, which should give better mouse input in some cases. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">sdos-test client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag and as a result it is less constant and thus (for some people) hard to get used to. Instead, with this client, using high maxfps values like 250/500/1000 (or multiples of your screen's refresh rate) will reduce sceen tearing, while ensuring a constant input polling rate and avoiding input lag due to vsync.
+					This client is based on pisto's work of porting the <a href="http://sauerbraten.org/">Sauerbraten</a> client from SDL 1.2 to SDL 2, which should give better mouse input in some cases. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">SDoS client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag and as a result it is less constant and thus (for some people) hard to get used to. Instead, with this client, using high maxfps values like 250/500/1000 (or multiples of your screen's refresh rate) will reduce sceen tearing, while ensuring a constant input polling rate and avoiding input lag due to vsync.
 					<br />
 					<span class="red">Note: if you still have performance issues try to set <code>/maxfps 0</code>.</span>
 				</p>
@@ -44,6 +44,7 @@
 					<li>Improved ALT + TAB functionality</li>
 					<li>Detailed statistics per player (e.g. accuracy and damage per weapon) via <code>/showplayerstats</code> command (due to current network protocol limitations, statistics are gathered only after connecting to a server)</li>
 					<li>Optional detailed statistics logging on a game end</li>
+					<li>Beta version of server previews, to enable it use <code>/showserverpreviews 1</code> command</li>
 				</ul>
 			</div>
 			<div class="cell">
@@ -53,7 +54,7 @@
 					<li>Options to show more statistics on scoreboard</li>
 					<li>Easy to use GUI for configuration of new features <code>/extendedsettings</code> command</li>
 					<li>New command <code>/ignoreserver</code> to permanently ignore any server on the master list</li>
-                                        <li>New command <code>/demoseek <i>min</i> <i>sec</i></code> to make a fast rewind to any position in a demo</li>
+					<li>New command <code>/demoseek <i>min</i> <i>sec</i></code> to make a fast rewind to any position in a demo</li>
 				</ul>
 			</div>
 		</div>
