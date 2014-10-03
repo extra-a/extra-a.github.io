@@ -55,6 +55,12 @@ a {
 	color: #3385ff;
 }
 
+code {
+	font-family: 'Inconsolata', monospace;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+
 .download-button {
 	background: #ff4733;
 	box-shadow: 0 0 1px 5px #ff8c80;
