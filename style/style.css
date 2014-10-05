@@ -31,6 +31,12 @@ body {
 
 #description {
 	width: 70%
+	text-align: justify;
+}
+
+#main-description {
+	text-align: justify;
+	font-size: 1.4em;
 }
 
 #features .cell {
@@ -49,10 +55,12 @@ h1 {
 
 ul {
 	margin: 0 auto 1em auto;
+	text-align: justify;
 }
 
 a {
 	color: #3385ff;
+	text-decoration: none;
 }
 
 code {
@@ -78,6 +86,10 @@ code {
 	display: inline-block;
 }
 
+#version {
+	font-size: 0.5em;
+}
+
 #screenshots img {
 	width: 100%;
 	margin: 1em 0;
@@ -92,6 +104,6 @@ code {
 	margin-bottom: 0;
 }
 
-.red {
-	color: #ff4733;
+.warning {
+	font-size: 0.6em;
 }

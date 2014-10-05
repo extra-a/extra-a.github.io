@@ -17,20 +17,17 @@
 		<div class="table">
 			<div id="download" class="cell">
 				<a class="download-button" href="https://github.com/extra-a/sauer-sdl2-bins/archive/master.zip">
-					Download
+					<div>Download</div>
+					<div id="version">Version</div>
 				</a>
-
-				<p id="version"> Version
-				</p>
 			</div>
 			<div id="description" class="cell">
-				<p>
-					This client is based on pisto's work of porting the <a href="http://sauerbraten.org/">Sauerbraten</a> client from SDL 1.2 to SDL 2, which should give better mouse input in some cases. It offers the same features as pisto's <a href="https://github.com/pisto/sdos-test">SDoS client</a>, except for the multipoll functionality. Multipoll aims to minimize the input lag and as a result it is less constant and thus (for some people) hard to get used to. Instead, with this client, using high maxfps values like 250/500/1000 (or multiples of your screen's refresh rate) will reduce sceen tearing, while ensuring a constant input polling rate and avoiding input lag due to vsync.
-					<br />
-					<span class="red">Note: if you still have performance issues try to set <code>/maxfps 0</code>.</span>
-				</p>
-				<p>
-					Visual Studio and official SDL2 libraries for Windows are used. In combination with replacing multipoll with the old and tested Sauerbraten code, this will result in better performance and compatibility with more OS/hardware combinations. This client also offers some additional game hud elements, which we feel have been missing for years (all of them are diabled by default and separate config files are used).
+				<p id="main-description">
+					<a href="http://sauerbraten.org/">Sauerbraten</a> SDL2 Client client
+					for windows/linux. It also has some additional features, that have
+					been missing for years (all of them are disabled by default and
+					separate configuration files are used). Use <code>/extendedsettings</code>
+					command for configuring.
 				</p>
 			</div>
 		</div>
