@@ -1,72 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Sauerbraten SDL2 Client</title>
-	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
-	<link href="style/style.css" rel="stylesheet" type="text/css">
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta charset="utf-8">
-</head>
+  <head>
+    <title>Sauerbraten SDL2 Client</title>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+  </head>
 
-<body>
-	<div id="content">
-		<h1>Sauerbraten SDL2 Client</h1>
+  <body>
+    <div id="content">
+      <h1>Sauerbraten SDL2 Client</h1>
 
-		<div class="table">
-			<div id="download" class="cell">
-				<a class="download-button" href="https://github.com/extra-a/sauer-sdl2-bins/archive/master.zip">
-					<div>Download</div>
-					<div id="version">Version</div>
-				</a>
-			</div>
-			<div id="description" class="cell">
-				<p id="main-description">
-					<a href="http://sauerbraten.org/">Sauerbraten</a> SDL2 Client client
-					for windows/linux. It also has some additional features, that have
-					been missing for years (all of them are disabled by default and
-					separate configuration files are used). Use <code>/extendedsettings</code>
-					command for configuring.
-				</p>
-			</div>
-		</div>
-
-		<h2>Features</h2>
-
-		<div id="features" class="table">
-			<div class="cell">
-				<ul>
-					<li>Open source: <a href="https://github.com/extra-a/sauer-sdl2.git">code is on GitHub</a></li>
-					<li>Native build system/libraries are used (no static linking)</li>
-					<li>Improved ALT + TAB functionality</li>
-					<li>Detailed statistics per player (e.g. accuracy and damage per weapon) via <code>/showplayerstats</code> command (due to current network protocol limitations, statistics are gathered only after connecting to a server)</li>
-					<li>Optional detailed statistics logging on a game end</li>
-					<li>Server previews, to enable it use <code>/showserverpreviews 1</code> command</li>
-				</ul>
-			</div>
-			<div class="cell">
-				<ul>
-					<li>New hud elements: clock, scores and ammobar</li>
-					<li>Customization of all new hud elements postions and sizes</li>
-					<li>Colored health and armour</li>
-					<li>Options to show more statistics on scoreboard</li>
-					<li>Easy to use GUI for configuration of new features <code>/extendedsettings</code> command</li>
-					<li>New command <code>/ignoreserver</code> to permanently ignore any server on the master list</li>
-					<li>New command <code>/demoseek <i>min</i> <i>sec</i></code> to make a fast rewind to any position in a demo</li>
-				</ul>
-			</div>
-		</div>
-
-		<div id="screenshots">
-			<img src="./screenshots/scores.jpg" alt="Scoreboard with optional information like damage">
-			<img src="./screenshots/stats.jpg" alt="Detailed player statistics">
-			<img src="./screenshots/menu.jpg" alt="Extended settings menu">
-			<img src="./screenshots/server_preview.jpg" alt="Server preview">
-		</div>
+      <div class="table">
+	<div id="download" class="cell">
+	  <a class="download-button" href="https://github.com/extra-a/sauer-sdl2-bins/archive/master.zip">
+	    <div>Download</div>
+	    <div id="version">Version</div>
+	  </a>
 	</div>
-	<script src="jquery.xdomainajax.js"></script>
-	<script src="version.js"></script>
-</body>
+	<div id="description" class="cell">
+	  <p id="main-description">
+	    <a href="http://sauerbraten.org/">Sauerbraten</a> SDL2 Client client
+	    for windows/linux. It also has some additional features and HUDs, that have
+	    been missing for years (all of them are disabled by default and
+	    separate configuration files are used). Use <code>/extendedsettings</code>
+	    command to access configuration GUI for all new features.
+	  </p>
+	</div>
+      </div>
+
+      <h2>Features</h2>
+
+      <div id="features" class="table">
+	<div class="cell">
+	  <ul>
+	    <li>Open source: <a href="https://github.com/extra-a/sauer-sdl2.git">code is on GitHub</a>.</li>
+	    <li>New highly customisable HUD.</li>
+            <li>New HUD elements: clock, scores and ammobar.</li>
+            <li>Several predefined HUD customisations.</li>
+            <li>Colored health and armour.</li>
+            <li>Options to show more statistics on scoreboard.</li>
+            <li>Server previews.</li>
+            <li>Options to remove shoot/explosion effects.</li>
+	  </ul>
+	</div>
+	<div class="cell">
+	  <ul>
+            <li>Detailed statistics per player (e.g. accuracy and
+	      damage per weapon) via <code>/showplayerstats</code>
+	      command (due to current network protocol limitations,
+	      statistics are gathered only after connecting to a
+	      server).</li>
+            <li>Optional detailed statistics logging on a game end.</li>
+	    <li>New command <code>/ignoreserver</code> to permanently ignore any server on the master list.</li>
+	    <li>New command <code>/demoseek <i>min</i> <i>sec</i></code> to make a fast rewind to any position in a demo.</li>
+	  </ul>
+	</div>
+      </div>
+
+      <div id="screenshots">
+        <div class="figure">
+          <img src="./screenshots/hudnew.jpg" alt="New HUD">
+          <div class="caption">New customisable HUD</div>
+        </div>
+        <div class="figure">
+	  <img src="./screenshots/hudoldext.jpg" alt="Old extended HUD">
+          <div class="caption">Old hud with some additional elements</div>
+        </div>
+        <div class="figure">
+	  <img src="./screenshots/scores.jpg" alt="Scoreboard">
+          <div class="caption">Scoreboard with additional statistics</div>
+        </div>
+        <div class="figure">
+	  <img src="./screenshots/stats.jpg" alt="Detailed player statistics">
+          <div class="caption">Detailed player statistics</div>
+        </div>
+        <div class="figure">
+	  <img src="./screenshots/menu.jpg" alt="New features configuration GUI">
+          <div class="caption">New features configuration GUI</div>
+        </div>
+        <div class="figure">
+	  <img src="./screenshots/server_preview.jpg" alt="Server preview">
+          <div class="caption">Server preview</div>
+        </div>
+      </div>
+    </div>
+    <script src="jquery.xdomainajax.js"></script>
+    <script src="version.js"></script>
+  </body>
 
 </html>
