@@ -30,8 +30,8 @@ body {
 }
 
 #description {
-    width: 70%
-	       text-align: justify;
+    width: 70%;
+    text-align: justify;
 }
 
 #main-description {
@@ -70,14 +70,14 @@ code {
 }
 
 .download-button {
-    background: #ff4733;
-    box-shadow: 0 0 1px 5px #ff8c80;
+    background: #2E8B57;
+    box-shadow: 0 0 1px 5px #3CB371;
     padding: .75em 1em;
 
     font-size: 1.5em;
     font-weight: bold;
     color: white;
-    text-shadow: 1px 1px 0px #e61600;
+    text-shadow: 1px 1px 0px #006400;
     text-transform: uppercase;
     text-decoration: none;
 }
