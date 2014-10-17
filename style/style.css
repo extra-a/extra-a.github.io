@@ -50,7 +50,6 @@ h1, h2 {
 
 h1 {
     font-size: 2.25em;
-    color: #111;
 }
 
 ul {
@@ -64,9 +63,10 @@ a {
 }
 
 code {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Ubuntu Mono', monospace;
     padding-left: 0.25em;
     padding-right: 0.25em;
+    background-color: #EEE;
 }
 
 .download-button {
@@ -110,9 +110,5 @@ code {
 }
 
 #screenshots div:last-child {
-    margin-bottom: 0em;
-}
-
-.warning {
-    font-size: 0.6em;
+    margin-bottom: 1em;
 }
