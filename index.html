@@ -103,13 +103,13 @@
           time interval between two recieved position packets can be
           two times wider than the original one. Furthermore colliding
           frequencies of server's and client's packet rates are
-          causing even larger delays. When sender's network delay
-          slightly increases, the time interval between two packets
-          will be more than a server packet rate. This could often
-          happen even on a very good connection. The result will be
-          that a packet will miss a server time slice adding even
-          more 33ms delay. This case also could be seen on a
-          lagometer, client pj will jump up to 66ms.
+          causing delays on a receiver side. When sender's network
+          delay slightly increases, the time interval between two
+          packets will be more than a server packet rate. This could
+          often happen even on a very good connection. The result will
+          be that a packet will miss a server time slice. This case
+          also could be seen on a lagometer, client pj will jump up to
+          66ms, twice the server packet delay time.
         </p>
 
         <p>
