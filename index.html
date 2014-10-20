@@ -11,6 +11,7 @@
 
   <body>
     <div id="content">
+
       <h1>Sauerbraten SDL2 Client</h1>
 
       <div class="table">
@@ -28,7 +29,7 @@
             missing for years (all of them are disabled by default and
             separate configuration files are
             used). Use <code>/extendedsettings</code> command to
-            access configuration GUI for all options.
+            access new configuration GUI.
           </p>
         </div>
       </div>
@@ -40,7 +41,7 @@
           <li>New HUD with highly customisable elements</li>
           <li>New HUD elements: clock, scores and ammobar</li>
           <li>Several predefined HUD customisations</li>
-          <li>Spectator HUD lagometer and player ping</li>
+          <li>Spectator HUD lagometer and player's ping</li>
           <li>Colored health and armour</li>
           <li>Server scoreboard previews</li>
           <li>Options to show more statistics on scoreboard</li>
@@ -51,6 +52,13 @@
             <span class="note"> Note: statistics are gathered only after connecting
             to a server</span></li>
           <li>Optional detailed statistics logging on a game end</li>
+          <li>New option <code>positionpackagedelay</code> that
+            decreases client package delay <br>
+            <span class="note"> Note: see Better networking
+              section</span></li>
+          <li>New
+            command <code>/writeextendedcfg <i>filename</i></code> to
+            save only new variables in a specific file</li>
           <li>New
             command <code>/ignoreserver <i>host</i> <i>[port]</i></code>
             to permanently ignore any server on the master list</li>
@@ -61,6 +69,67 @@
             source: <a href="https://github.com/extra-a/sauer-sdl2.git">code
               is on GitHub</a></li>
         </ul>
+      </div>
+
+      <h2>Better networking</h2>
+
+      <div class="text-container">
+        <p>
+          By default sauerbraten client sends around 30 player position
+          packets per second. Server retranslates these packages to
+          other clients with the same rate of 30 packets per
+          second. Time between two received position packages from a
+          server is also know as pj. Such low rates were used back in
+          90s for modem connection rates and are obsolete nowadays,
+          only causing huge artificial network lags.
+
+        <p>
+          So position handing is working this way. The first step is
+          when a client sends position packet with a <i>delay of
+          sender packet rate</i> (33ms), then it takes a <i>sender
+          network delay</i> before a packet reaches the server. Then
+          <i>server packet rate delay</i> that varies from 0ms to 33ms
+          occurs. And then the final <i>receiver network delay</i>
+          takes place.
+        </p>
+
+        <p>
+          This results in artificial delays form 33ms up to 66ms. The
+          first problem is that such values are significant compared
+          to networks delays which are about half of a ping value. The
+          second problem is that this delay is a variable. Client side
+          interpolation and (sauerbraten uses client side hit
+          detection) will have significant position errors because a
+          time interval between two recieved position packages can be
+          two times wider than the original one. Furthermore colliding
+          frequencies of server's and client's packet rates are
+          causing even larger delays. When sender's network delay
+          slightly increases, the time interval between two packages
+          will be more than a server packet rate. This could often
+          happen even on a very good connection. The result will be
+          that a package will miss a server time slice adding even
+          more 33ms delay. This case also could be seen on a
+          lagometer, client pj will jump up to 66ms.
+        </p>
+
+        <p>
+          The sender packet rate of 125 packets per second and default
+          server rate could significantly improve position
+          precision. Several client packages are send to a server in
+          one time slice, so a receiver will still have only 30
+          position packages but the additional delay will be only from
+          8ms to 16ms. And for a server with a lower packages delays
+          around 10-20ms that value will be even lower and position
+          interpolation will be made with 50-100 packet per second.
+        </p>
+
+        <p>
+          In conclusion, client 8ms position package delay and 10-20
+          server one will give much better results. It will increase
+          server traffic around 3 times, but that should not be a
+          problem today.
+        </p>
+        
       </div>
 
       <h2>Screenshots</h2>
