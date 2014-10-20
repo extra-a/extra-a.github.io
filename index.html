@@ -48,20 +48,18 @@
           <li>Options to remove some particles effects</li>
           <li>Use spectating player team</li>
           <li>Detailed player's statistics
-            via <code>/showplayerstats</code><br>
-            <span class="note"> Note: statistics are gathered only after connecting
-            to a server</span></li>
+            via <code>/showplayerstats</code>
+            <sup id="ref1"><a href="#note1">1</a></sup></li>
           <li>Optional detailed statistics logging on a game end</li>
           <li>New variable <code>positionpacketdelay</code> that
-            decreases client packet delay <br>
-            <span class="note"> Note: see Better networking
-              section</span></li>
+            decreases client packet
+            delay <sup id="ref2"><a href="#note2">2</a></sup> </li>
           <li>New
             command <code>/writeextendedcfg <i>filename</i></code> to
-            save only new variables in a specific file</li>
+            save only new variables in a file</li>
           <li>New
             command <code>/ignoreserver <i>host</i> <i>[port]</i></code>
-            to permanently ignore any server on the master list</li>
+            to permanently ignore server in the list</li>
           <li>New
             command <code>/demoseek <i>min</i> <i>sec</i></code> to
             make a fast rewind to any position in a demo</li>
@@ -69,6 +67,13 @@
             source: <a href="https://github.com/extra-a/sauer-sdl2.git">code
               is on GitHub</a></li>
         </ul>
+        <div id="notes">
+          <span id="note1"> <a href="#ref1">1.</a> Due to current
+            network protocol limitations statistics are gathered only
+            after connecting to a server. </span> <br>
+          <span id="note2"> <a href="#ref2">2.</a> See Better
+          networking section.</span>
+        </div>
       </div>
 
       <h2>Better networking</h2>
@@ -97,42 +102,42 @@
           This results in artificial delays form 33ms up to 66ms. The
           first problem is that such values are significant compared
           to networks delays which are about half of a ping value. The
-          second problem is that this delay is a variable. Client side
-          interpolation and (sauerbraten uses client side hit
-          detection) will have significant position errors because a
-          time interval between two recieved position packets can be
-          two times wider than the original one. Furthermore colliding
-          frequencies of server's and client's packet rates are
-          causing delays on a receiver side. When sender's network
-          delay slightly increases, the time interval between two
-          packets will be more than a server packet rate. This could
-          often happen even on a very good connection. The result will
-          be that a packet will miss a server time slice. This case
-          also could be seen on a lagometer, client pj will jump up to
-          66ms, twice the server packet delay time.
+          second problem is that the delay varies about twice it's
+          minimum value. Client side interpolation and (sauerbraten
+          uses client side hit detection) will have significant
+          position errors because a time interval between two received
+          position packets can be two times wider than the original
+          one. Furthermore colliding frequencies of server's and
+          client's packet rates are causing delays on a receiver
+          side. When sender's network delay slightly increases, the
+          time interval between two packets will be more than a server
+          packet rate. So that packet may miss a server time
+          slice. This could often happen even on a very good
+          connection. It also could be seen on a lagometer, client pj
+          will jump up to 66ms, twice the server packet delay time.
         </p>
 
         <p>
-          The sender packet rate of 125 packets per second and default
-          server rate could significantly improve position
-          precision. Several client packets are send to a server in
-          one time slice, so a receiver will still have only 30
-          position packets but the additional delay will be only from
-          8ms to 16ms. And for a server with a lower packets delays
-          around 10-20ms that value will be even lower and position
-          interpolation will be made with 50-100 packet per second.
+          The sender packet rate of 125 packets per second with even
+          the default server rate could improve position
+          precision. Several client packets are send to a server per
+          time slice, so additional delay will vary from 33ms to 41ms
+          without any slice misses. And for a server with a lower
+          packets delays of 10ms that value will be even much lower
+          from 10ms to 18ms and position interpolation will be made
+          with 100 packet per second (instead of 30).
         </p>
 
         <p>
-          In conclusion, client 8ms position packet delay and 10-20
+          In conclusion, client 8ms position packet delay and 10-20ms
           server one will give much better results. It will increase
           server traffic around 3 times, but that should not be a
-          problem today. Also these changes are fully compatable with
+          problem today. Also these changes are fully compatible with
           the sauerbraten default client and server.
         </p>
 
         <div id="serverlist">
-          <h4>Servers with support of lower postion delay</h4>
+          <h4>Servers with support of lower position delay</h4>
           <ul>
             <li><a href="https://code.google.com/p/remod-sauerbraten/">Remod</a></li>
           </ul>

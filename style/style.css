@@ -1,3 +1,5 @@
+/* Global */
+
 html {
     background-image: url(concrete_wall_2.jpg);
 }
@@ -23,41 +25,99 @@ body {
     vertical-align: middle;
 }
 
+.download-button {
+    background: #2E8B57;
+    box-shadow: 0 0 1px 5px #3CB371;
+    padding: .75em 1em;
+
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 0px #006400;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: inline-block;
+}
+
+
+/* Download */
+
 #download {
     width: 30%;
     text-align: center;
     padding-right: 2em;
 }
 
+#version {
+    font-size: 0.5em;
+}
+
 #description {
     width: 70%;
+    padding-right: 1.5em;
+    font-size: 1.15em;
     text-align: justify;
 }
 
-#main-description {
-    text-align: justify;
-    font-size: 1.15em;
-    margin-right: 1.5em;
-}
+
+/* Features */
 
 #features {
     width: 75%;
-    vertical-align: top;
-    font-size: 1.15em;
     margin-left: auto;
     margin-right: auto;
+    text-align: right;
 }
 
 #features ul {
-    margin: 0 auto 0 auto;
-    text-align: center;
     padding-left: 0;
     list-style-type: none;
 }
 
 #features li {
+    font-size: 1.15em;
+    text-align: center;
     margin-bottom: 0.5em;
 }
+
+#notes {
+    margin-right: auto;
+    width: 50%;
+    text-align: justify;
+    font-size: 0.85em;
+}
+
+
+/* Servers list */
+
+#serverlist {
+    text-align: center;
+}
+
+#serverlist h4 {
+    margin-bottom: 0.5em;
+}
+
+#serverlist ul {
+    margin-top: 0em;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+
+/* Screenshots */
+
+#screenshots div:first-child {
+    margin-top: 2em;
+}
+
+#screenshots div:last-child {
+    margin-bottom: 1em;
+}
+
+
+/* Global */
 
 .text-container {
     width: 75%;
@@ -66,25 +126,14 @@ body {
     text-align: justify;
 }
 
-#serverlist h4 {
+h1 {
     text-align: center;
-    margin-bottom: 0.5em;
-}
-
-#serverlist ul {
-    text-align: center;
-    margin-top: 0em;
-    padding-left: 0;
+    font-size: 2.25em;
 }
 
 h2 {
     text-align: center;
     margin-top: 1.75em;
-}
-
-h1 {
-    text-align: center;
-    font-size: 2.25em;
 }
 
 a {
@@ -97,27 +146,6 @@ code {
     padding-left: 0.25em;
     padding-right: 0.25em;
     background-color: #EEE;
-}
-
-.download-button {
-    background: #2E8B57;
-    box-shadow: 0 0 1px 5px #3CB371;
-    padding: .75em 1em;
-
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px 0px #006400;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-
-#download .download-button {
-    display: inline-block;
-}
-
-#version {
-    font-size: 0.5em;
 }
 
 .figure {
@@ -133,16 +161,4 @@ code {
 .caption {
     font-size: 1.15em;
     text-align: center;
-}
-
-#screenshots div:first-child {
-    margin-top: 2em;
-}
-
-#screenshots div:last-child {
-    margin-bottom: 1em;
-}
-
-.note {
-    font-size: 0.75em;
 }
