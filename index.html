@@ -52,7 +52,7 @@
             <span class="note"> Note: statistics are gathered only after connecting
             to a server</span></li>
           <li>Optional detailed statistics logging on a game end</li>
-          <li>New option <code>positionpacketdelay</code> that
+          <li>New variable <code>positionpacketdelay</code> that
             decreases client packet delay <br>
             <span class="note"> Note: see Better networking
               section</span></li>
@@ -127,10 +127,19 @@
           In conclusion, client 8ms position packet delay and 10-20
           server one will give much better results. It will increase
           server traffic around 3 times, but that should not be a
-          problem today.
+          problem today. Also these changes are fully compatable with
+          the sauerbraten default client and server.
         </p>
-        
+
+        <div id="serverlist">
+          <h4>Servers with support of lower postion delay</h4>
+          <ul>
+            <li><a href="https://code.google.com/p/remod-sauerbraten/">Remod</a></li>
+          </ul>
+        </div>
+
       </div>
+
 
       <h2>Screenshots</h2>
 
