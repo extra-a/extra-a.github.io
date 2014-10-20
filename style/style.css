@@ -39,22 +39,27 @@ body {
     font-size: 1.15em;
 }
 
-#features .cell {
-    width: 50%;
+#features {
+    width: 75%;
     vertical-align: top;
+    font-size: 1.15em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h1, h2 {
+h2 {
     text-align: center;
+    margin-top: 1.5em;
 }
 
 h1 {
+    text-align: center;
     font-size: 2.25em;
 }
 
 ul {
     margin: 0 auto 1em auto;
-    text-align: justify;
+    text-align: center;
 }
 
 a {
@@ -111,4 +116,8 @@ code {
 
 #screenshots div:last-child {
     margin-bottom: 1em;
+}
+
+.note {
+    font-size: 0.75em;
 }
