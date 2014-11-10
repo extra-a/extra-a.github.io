@@ -85,9 +85,11 @@ body {
     font-size: 0.75em;
 }
 
+/* Notes */
+
 #notes {
+    margin-top: 5em;
     margin-right: auto;
-    width: 50%;
     text-align: justify;
     font-size: 0.85em;
 }
