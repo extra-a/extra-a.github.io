@@ -93,30 +93,10 @@ body {
 }
 
 
-/* Servers list */
-
-#serverlist {
-    text-align: center;
-}
-
-#serverlist h4 {
-    margin-bottom: 0.5em;
-}
-
-#serverlist ul {
-    margin-top: 0em;
-    padding-left: 0;
-    list-style-position: inside;
-}
-
-
 /* Screenshots */
 
-#screenshots div:first-child {
+#screenshots .figure {
     margin-top: 2em;
-}
-
-#screenshots div:last-child {
     margin-bottom: 1em;
 }
 

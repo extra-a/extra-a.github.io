@@ -27,9 +27,8 @@
             Client client for windows/linux. It also has some
             additional features and HUD customisations, that have been
             missing for years (all of them are disabled by default and
-            separate configuration files are
-            used). Use <code>/extendedsettings</code> command to
-            access new configuration GUI.
+            separate configuration files are used). All configurations
+            options are now integrated into the main menu.
           </p>
         </div>
       </div>
@@ -52,8 +51,7 @@
           <li>Options to remove some particles effects</li>
           <li>Options to customise rifle trails</li>
           <li>Use spectating player team</li>
-          <li>Detailed player's statistics
-            via <code>/showplayerstats</code>
+          <li>Per-weapon player's accuracy and damage statistics board.
             <sup id="ref2"><a href="#note2">[2]</a></sup></li>
           <li>Optional detailed statistics logging on a game end</li>
           <li>New variable <code>positionpacketdelay</code> that
@@ -68,22 +66,57 @@
           <li>New
             command <code>/demoseek <i>min</i> <i>sec</i></code> to
             make a fast rewind to any position in a demo</li>
+          <li>New integrated main menu with all new
+            settings <sup id="ref4"><a href="#note4">[4]</a></sup>
+          </li>
           <li>New Alt+Enter shortcut for window minimisation
-            </li>
+          </li>
         </ul>
         <div id="notes">
           <span id="note1"> <a href="#ref1">1.</a> Lagometer graph is
-          showing non-smoothed pj values, the full height is equal to
-          100ms. </span> <br>
+            showing non-smoothed pj values, the full height is equal to
+            100ms. </span> <br>
           <span id="note2"> <a href="#ref2">2.</a> Due to current
             network protocol limitations statistics are gathered only
             after connecting to a server. </span> <br>
-          <span id="note3"> <a href="#ref3">3.</a> See Better
-          networking section.</span>
+          <span id="note3"> <a href="#ref3">3.</a> See <a href="#bnet">Better
+            networking</a> section.</span> <br>
+          <span id="note4"> <a href="#ref4">4.</a> To use the default
+            menu set <code>usenewmainmenu 0</code> and restart the
+            game.</span>
         </div>
       </div>
 
-      <h2>Better networking</h2>
+      <h2>Screenshots</h2>
+
+      <div id="screenshots">
+        <div class="figure">
+          <img src="./screenshots/hudnew.jpg" alt="New HUD variant 1">
+          <div class="caption">New customisable HUD</div>
+        </div>
+        <div class="figure">
+          <img src="./screenshots/hudnew2.jpg" alt="New HUD variant 2">
+          <div class="caption">New customisable HUD</div>
+        </div>
+        <div class="figure">
+          <img src="./screenshots/players_search.jpg" alt="Players search">
+          <div class="caption">Players search across all servers</div>
+        </div>
+        <div class="figure">
+          <img src="./screenshots/server_preview.jpg" alt="Server preview">
+          <div class="caption">Server preview</div>
+        </div>
+        <div class="figure">
+          <img src="./screenshots/stats.jpg" alt="Detailed player statistics">
+          <div class="caption">Detailed player statistics board</div>
+        </div>
+        <div class="figure">
+          <img src="./screenshots/scores.jpg" alt="Scoreboard">
+          <div class="caption">Scoreboard with additional statistics</div>
+        </div>
+      </div>
+
+      <h2 id="bnet">Better networking</h2>
 
       <div class="text-container">
         <p>
@@ -143,48 +176,14 @@
           the sauerbraten default client and server.
         </p>
 
-        <div id="serverlist">
-          <h4>Servers with support of lower position delay</h4>
-          <ul>
-            <li><a href="https://code.google.com/p/remod-sauerbraten/">Remod</a></li>
-          </ul>
-        </div>
+        <p>
+          <b>Servers with support of lower position
+            delay: <a href="https://code.google.com/p/remod-sauerbraten/">Remod</a> </b>
+        </p>
 
       </div>
+      <br>
 
-
-      <h2>Screenshots</h2>
-
-      <div id="screenshots">
-        <div class="figure">
-          <img src="./screenshots/hudnew.jpg" alt="New HUD variant 1">
-          <div class="caption">New customisable HUD</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/hudnew2.jpg" alt="New HUD variant 2">
-          <div class="caption">New customisable HUD</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/hudoldext.jpg" alt="Old extended HUD">
-          <div class="caption">Additional elements with the default HUD</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/scores.jpg" alt="Scoreboard">
-          <div class="caption">Scoreboard with additional statistics</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/stats.jpg" alt="Detailed player statistics">
-          <div class="caption">Detailed player statistics</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/menu.jpg" alt="New features configuration GUI">
-          <div class="caption">Configuration GUI</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/server_preview.jpg" alt="Server preview">
-          <div class="caption">Server preview</div>
-        </div>
-      </div>
     </div>
     <script src="jquery.xdomainajax.js"></script>
     <script src="version.js"></script>
