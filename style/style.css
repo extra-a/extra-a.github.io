@@ -81,7 +81,8 @@ body {
     margin-bottom: 0.5em;
 }
 
-#features sup a {
+#features sup {
+    vertical-align: top;
     font-size: 0.75em;
 }
 
