@@ -44,6 +44,7 @@
           <li>New HUD elements: clock, scores, ammobar and
             lagometer <sup id="ref1"><a href="#note1">[1]</a></sup></li>
           <li>Several predefined HUDs customisations</li>
+          <li>All HUD customisations can be done via GUI</li>
           <li>Persistent player searches across all servers aka friend lists</li>
           <li>Server scoreboard previews</li>
           <li>Options to show more statistics on scoreboard</li>
@@ -66,6 +67,7 @@
           <li>Auto downloading demos from
           servers <sup id="ref4"><a href="#note4">[4]</a></sup>
           </li>
+          <li>Demobrowser to play downloaded demos</li>
           <li>New integrated main menu with all new
             settings <sup id="ref5"><a href="#note5">[5]</a></sup>
           </li>
@@ -105,13 +107,25 @@
           <img src="./screenshots/scores.jpg" alt="Scoreboard">
           <div class="caption">Scoreboard with additional statistics</div>
         </div>
+        <div class="figure">
+          <img src="./screenshots/hud_config.jpg" alt="Hudmenu">
+          <div class="caption">HUD settings menu</div>
+        </div>
+        <div class="figure">
+          <img src="./screenshots/demobrowser.jpg" alt="Demobrowser">
+          <div class="caption">Demobrowser</div>
+        </div>
+        <div class="figure">
+          <img src="./screenshots/main_menu.jpg" alt="Mainmenu">
+          <div class="caption">New main menu</div>
+        </div>
       </div>
 
       <h2 id="bnet">Better networking</h2>
 
       <div class="text-container">
         <p>
-          By default sauerbraten client sends around 30 player position
+          By default Sauerbraten client sends around 30 player position
           packets per second. Server retranslates these packets to
           other clients with the same rate of 30 packets per
           second. Time between two received position packets from a
@@ -134,7 +148,7 @@
           first problem is that such values are significant compared
           to networks delays which are about half of a ping value. The
           second problem is that the delay varies about twice it's
-          minimum value. Client side interpolation and (sauerbraten
+          minimum value. Client side interpolation and (Sauerbraten
           uses client side hit detection) will have significant
           position errors because a time interval between two received
           position packets can be two times wider than the original
@@ -164,7 +178,7 @@
           server one will give much better results. It will increase
           server traffic around 3 times, but that should not be a
           problem today. Also these changes are fully compatible with
-          the sauerbraten default client and server.
+          the Sauerbraten default client and server.
         </p>
 
         <p>
