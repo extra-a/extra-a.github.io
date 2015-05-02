@@ -16,17 +16,17 @@ jQuery(document).ready(function ($) {
     var duration = 250;
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > offset) {
-            jQuery('.back-to-top').fadeIn(duration);
+            jQuery('.scroll_beg').fadeIn(duration);
         } else {
-            jQuery('.back-to-top').fadeOut(duration);
+            jQuery('.scroll_beg').fadeOut(duration);
         }
     });
-    jQuery('.back-to-top').click(function(event) {
+    jQuery('.scroll_beg').click(function(event) {
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
     })
-    // jQuery('.back-to-top').hide();
+    jQuery('.scroll_beg').hide();
     $.get("https://raw.githubusercontent.com/extra-a/sauer-sdl2-bins/master/VERSION").then(function(data) {
         $("#version").html($(data.results[0], "p").text());
     });

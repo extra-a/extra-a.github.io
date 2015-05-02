@@ -121,7 +121,7 @@ html {
 
 /* To top */
 
-.back-to-top {
+.scroll_beg {
     display: inline;
     position: fixed;
     bottom: 0;
@@ -131,7 +131,7 @@ html {
     text-decoration: none;
 }
 
-.back-to-top i {
+.scroll_beg i {
     font-size: 60px;
     color: #3385ff;
 }
