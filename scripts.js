@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
     })
-    jQuery('.back-to-top').hide();
+    // jQuery('.back-to-top').hide();
     $.get("https://raw.githubusercontent.com/extra-a/sauer-sdl2-bins/master/VERSION").then(function(data) {
         $("#version").html($(data.results[0], "p").text());
     });

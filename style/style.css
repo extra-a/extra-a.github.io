@@ -60,6 +60,10 @@ html {
     text-align: justify;
 }
 
+#description a {
+    color: #3385ff;
+}
+
 /* Features */
 
 #features ul {
@@ -132,7 +136,7 @@ html {
     color: #3385ff;
 }
 
-/* Global */
+/* Text */
 
 .text-container {
     width: 960px;
@@ -141,6 +145,13 @@ html {
     text-align: justify;
 }
 
+#description a,
+.text-container a {
+    color: #3385ff;
+    text-decoration: none;
+}
+
+#description a:hover,
 .text-container a:hover {
     text-decoration: underline;
 }
@@ -155,10 +166,6 @@ h2 {
     margin-top: 1.75em;
 }
 
-a {
-    color: #3385ff;
-    text-decoration: none;
-}
 
 code {
     font-family: 'Ubuntu Mono', monospace;
