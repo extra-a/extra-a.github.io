@@ -4,7 +4,7 @@ html {
     background-image: url(concrete_wall_2.jpg);
 }
 
-body {
+#content {
     background: white;
     margin: 1em auto;
     padding: 32px;
@@ -117,6 +117,23 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
+}
+
+/* To top */
+
+.back-to-top {
+    display: inline;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    text-decoration: none;
+}
+
+.back-to-top i {
+    font-size: 60px;
+    color: #3385ff;
 }
 
 .text-container a:hover,
