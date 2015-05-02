@@ -28,7 +28,7 @@ html {
 .download-button {
     background: #2E8B57;
     box-shadow: 0 0 1px 5px #3CB371;
-    padding: .75em 1em;
+    padding: 0.5em 1em;
 
     font-size: 1.5em;
     font-weight: bold;
@@ -49,7 +49,7 @@ html {
 
 #download {
     text-align: center;
-    padding-right: 2em;
+    padding-right: 32px;
 }
 
 #version {
@@ -68,7 +68,7 @@ html {
 
 #features ul {
     list-style-type: circle;
-    padding-left: 0;
+    padding-left: 0px;
 }
 
 #features li {
@@ -110,22 +110,14 @@ html {
     text-align: center;
 }
 
-/* Global */
-
-.text-container {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-}
 
 /* To top */
 
 .scroll_beg {
     display: inline;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 0px;
+    right: 0px;
     margin-right: 1em;
     margin-bottom: 1em;
     text-decoration: none;
