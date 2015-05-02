@@ -40,6 +40,10 @@ body {
     display: inline-block;
 }
 
+.download-button a:hover {
+    text-decoration: none;
+}
+
 
 /* Download */
 
@@ -56,25 +60,19 @@ body {
 #description {
     width: 70%;
     padding-right: 1.5em;
-    font-size: 1.15em;
     text-align: justify;
 }
 
 
 /* Features */
 
-#features {
-    width: 75%;
-}
-
 #features ul {
+    list-style-type: circle;
     padding-left: 0;
-    /* list-style-type: none; */
 }
 
 #features li {
-    font-size: 1.15em;
-    margin-bottom: 0.5em;
+    list-style-position: inside;
 }
 
 #features sup {
@@ -107,6 +105,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
+}
+
+.text-container a:hover,
+#notes a:hover,
+#description a:hover {
+    text-decoration: underline;
 }
 
 h1 {
