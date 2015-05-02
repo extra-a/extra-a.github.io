@@ -4,7 +4,11 @@
     <title>Sauerbraten SDL2 Client</title>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono|Source+Sans+Pro" rel="stylesheet" type="text/css">    
     <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link href="style/skins.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="jssor.slider.mini.js"></script>
+    <script src="jquery.xdomainajax.js"></script>
+    <script src="scripts.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8">
   </head>
@@ -33,9 +37,9 @@
             the download button.
           </p>
           <p>
-            <b>It is 100% open source and code is hosted on
-            the <a href="https://github.com/extra-a/sauer-sdl2.git">
-            GitHub repository</a>.</b>
+            <b>It is an open source project and code is hosted on
+            <a href="https://github.com/extra-a/sauer-sdl2.git">
+            GitHub</a>.</b>
           </p>
         </div>
       </div>
@@ -84,50 +88,56 @@
 
       <h2>Screenshots</h2>
 
-      <div id="screenshots">
-        <div class="figure">
-          <img src="./screenshots/hudnew.jpg" alt="New HUD variant 1">
-          <div class="caption">New customisable HUD</div>
+      <div id="slider1_container" style="position: relative; top: 0px; width: 960px; height: 540px; overflow: hidden; ">
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 960px; height: 540px; overflow: hidden;">
+          <div>
+            <img u="image" src="./screenshots/hudnew.jpg" />
+            <div class="slider_caption">Customisable HUD modification 1</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/hudnew2.jpg" />
+            <div class="slider_caption">Customisable HUD modification 2</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/hudnew3.jpg" />
+            <div class="slider_caption">Customisable HUD modification 3</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/players_search.jpg" />
+            <div class="slider_caption">Players search across all servers</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/search_editor.jpg" />
+            <div class="slider_caption">Players search editor</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/server_preview.jpg" />
+            <div class="slider_caption">Server preview</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/stats.jpg" />
+            <div class="slider_caption">Detailed player statistics board</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/scores.jpg" />
+            <div class="slider_caption">Scoreboard with additional statistics</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/hud_config.jpg" />
+            <div class="slider_caption">HUD settings menu</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/demobrowser.jpg" />
+            <div class="slider_caption">Demobrowser</div>
+          </div>
+          <div>
+            <img u="image" src="./screenshots/main_menu.jpg" />
+            <div class="slider_caption">New main menu</div>
+          </div>
         </div>
-        <div class="figure">
-          <img src="./screenshots/hudnew2.jpg" alt="New HUD variant 2">
-          <div class="caption">New customisable HUD</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/hudnew3.jpg" alt="New HUD variant 3">
-          <div class="caption">New customisable HUD</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/players_search.jpg" alt="Players search">
-          <div class="caption">Players search across all servers</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/search_editor.jpg" alt="Search editor">
-          <div class="caption">Players search editor</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/server_preview.jpg" alt="Server preview">
-          <div class="caption">Server preview</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/stats.jpg" alt="Detailed player statistics">
-          <div class="caption">Detailed player statistics board</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/scores.jpg" alt="Scoreboard">
-          <div class="caption">Scoreboard with additional statistics</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/hud_config.jpg" alt="Hudmenu">
-          <div class="caption">HUD settings menu</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/demobrowser.jpg" alt="Demobrowser">
-          <div class="caption">Demobrowser</div>
-        </div>
-        <div class="figure">
-          <img src="./screenshots/main_menu.jpg" alt="Mainmenu">
-          <div class="caption">New main menu</div>
+        <div u="navigator" class="jssorb12" style="bottom: -20px; right: 0px;">
+          <div u="prototype"></div>
         </div>
       </div>
 
@@ -217,8 +227,6 @@
       </div>
 
     </div>
-    <script src="jquery.xdomainajax.js"></script>
-    <script src="version.js"></script>
   </body>
 
 </html>

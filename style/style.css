@@ -7,8 +7,8 @@ html {
 body {
     background: white;
     margin: 1em auto;
-    padding: 2em;
-    max-width: 960px;
+    padding: 32px;
+    max-width: 1024px;
     box-sizing: border-box;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, .125);
     color: #333;
@@ -92,11 +92,23 @@ body {
 
 /* Screenshots */
 
-#screenshots .figure {
-    margin-top: 2em;
-    margin-bottom: 1em;
+#slider1_container {
+    padding-bottom: 24px;
+    background: rgba(0,0,0,1);
 }
 
+.slider_caption {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 960px;
+    height: 50px;
+    color: White;
+    background: rgba(0,0,0,0.66);
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+}
 
 /* Global */
 
@@ -133,19 +145,4 @@ code {
     padding-left: 0.25em;
     padding-right: 0.25em;
     background-color: #EEE;
-}
-
-.figure {
-    width: 100%;
-    margin: 3em 0;
-}
-
-.figure img {
-    width: 100%;
-    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .5);
-}
-
-.caption {
-    font-size: 1.15em;
-    text-align: center;
 }
