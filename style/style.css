@@ -49,7 +49,6 @@ html {
 
 #download {
     text-align: center;
-    padding-right: 32px;
 }
 
 #version {
@@ -57,6 +56,7 @@ html {
 }
 
 #description {
+    padding-left: 32px;
     text-align: justify;
 }
 
