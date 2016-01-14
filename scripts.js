@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
         return false;
     })
     jQuery('.scroll_beg').hide();
-    $.get("https://raw.githubusercontent.com/extra-a/sauer-sdl2-bins/master/VERSION").then(function(data) {
-        $("#version").html($(data.results[0], "p").text());
+    $.get("https://api.github.com/repos/extra-a/sauer-sdl2-bins/tags").then(function(data) {
+        $("#version").text("version: " + data[0].name);
     });
 });
