@@ -44,6 +44,8 @@ jQuery(document).ready(function ($) {
     $.get("https://api.github.com/repos/extra-a/sauer-sdl2-bins/tags").then(function(data) {
         data.sort(versioncmp);
         var v = data[data.length-1].name
+        var l = data[data.length-1].zipball_url
         $("#version").text("version: " + v);
+        $("#download-button").attr('href', l);
     });
 });
