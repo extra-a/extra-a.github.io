@@ -1,4 +1,18 @@
 
+function versioncmp (a, b) {
+    var pa = a.name.split('.');
+    var pb = b.name.split('.');
+    for (var i = 0; i < 3; i++) {
+        var na = Number(pa[i]);
+        var nb = Number(pb[i]);
+        if (na > nb) return 1;
+        if (nb > na) return -1;
+        if (!isNaN(na) && isNaN(nb)) return 1;
+        if (isNaN(na) && !isNaN(nb)) return -1;
+    }
+    return 0;
+};
+
 jQuery(document).ready(function ($) {
     var options = { $AutoPlay: true ,
                     $BulletNavigatorOptions: {
@@ -28,6 +42,8 @@ jQuery(document).ready(function ($) {
     })
     jQuery('.scroll_beg').hide();
     $.get("https://api.github.com/repos/extra-a/sauer-sdl2-bins/tags").then(function(data) {
-        $("#version").text("version: " + data[0].name);
+        data.sort(versioncmp);
+        var v = data[data.length-1].name
+        $("#version").text("version: " + v);
     });
 });
